@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-service
+  cloud:
+    bus:
+      destination: ymlUpdateTopic
+    config:
+      server:
+        git:
+          uri: https://github.com/realsuperman/spring-cloud-config
+          username: ${GITHUB_USERID}
+          password: ${GITHUB_TOKEN}
+  kafka:
+    bootstrap-servers: http://localhost:9092
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh

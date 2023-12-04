@@ -13,7 +13,7 @@ spring:
           username: ${GITHUB_USERID}
           password: ${GITHUB_TOKEN}
   kafka:
-    bootstrap-servers: http://localhost:9092
+    bootstrap-servers: ${KAFKA_SERVER}
 management:
   endpoints:
     web:

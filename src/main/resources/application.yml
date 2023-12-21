@@ -5,7 +5,7 @@ spring:
     name: config-service
   cloud:
     bus:
-      destination: busRefreshTopic
+      destination: bus-refresh-topic
     config:
       server:
         git:
